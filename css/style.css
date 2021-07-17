@@ -1,0 +1,80 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-accent-light-h:198;
+  --c-accent-light-s: 79%;
+  --c-accent-light-l:53%;
+  --c-accent-dark: hsl(210 10% 50%);
+  --c-text: hsl(210 11% 7%);
+}
+
+.page__body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.63;
+  color: var(--c-text);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 335px 140px;
+  row-gap: 25px;
+  max-width: 595px;
+  margin: 0 auto;
+  padding: 22px 48px 32px;
+}
+
+.main-header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+
+.main-header h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(var(--c-accent-light-h) var(--c-accent-light-s) var(--c-accent-light-l));
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contacts__info {
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+.contacts__info::before {
+  margin-right: 6px;
+  content: '';
+  display: inline-block;
+  height: 11px;
+  width: 11px;
+  background: hsl(var(--c-accent-light-h) var(--c-accent-light-s) var(--c-accent-light-l));
+  vertical-align: middle;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.contacts__info--email::before { mask-image: url(../img/email.svg); }
+
+.contacts__info--location::before { mask-image: url(../img/location.svg); }
+
+.contacts__info--telegram::before { mask-image: url(../img/telegram.svg); }
+
+.contacts__info:hover::before{ --c-accent-light-l:40%; }
