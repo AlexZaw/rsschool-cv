@@ -98,6 +98,8 @@ img{
 .author-photo { object-fit: cover; }
 
 .contacts {
+  list-style: none;
+  padding-left: 0;
   display: grid;
   justify-items: center;
   order: 3;
@@ -271,6 +273,7 @@ footer time{ font-size: 24px; }
     order: 0;
     grid-template-columns: max-content auto;
     justify-content: space-between;
+    justify-items: start;
     font-size: 12px;
   }
 
