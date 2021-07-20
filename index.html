@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Zawgorodniy CV</title>
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page__body">
+  <div class="container">
+    <main class="main-content">
+      <header class="main-header">
+        <div class="wrapper">
+          <h1>Alexander Zawgorodniy</h1>
+          <h2>Frontend Developer</h2>
+          <ul class="contacts">
+            <li>
+              <a class="contacts__link contacts__link--email"
+                href="mailto:alexandr.zawgorodniy@gmail.com">alexandr.zawgorodniy@gmail.com</a>
+            </li>
+            <li> <a class="contacts__link contacts__link--telegram"
+                href="https://t.me/Alex_Zaw">https://t.me/Alex_Zaw</a></li>
+            <li>
+              <a class="contacts__link contacts__link--location" href="https://goo.gl/maps/Rfo884ghVzzwnBE59">Tomsk,
+                Russia</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-header__photo">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/alexzaw@1x.webp 1x,
+            ./img/alexzaw@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="./img/alexzaw-mobile@1x.webp 1x,
+            ./img/alexzaw-mobile@2x.webp 2x">
+            <img class="author-photo" width="100" height="100" src="./img/alexzaw@1x.jpg"
+              srcset="./img/alexzaw@2x.jpg 2x" alt="author photo">
+          </picture>
+        </div>
+      </header>
+      <div>
+        <section class="experience listing">
+          <h2 class="section-header">Experience</h2>
+          <ul>
+            <li>
+              <h3 class="subheader">Frontend Developer</h3>
+              <span class="footnote">(as part of the practical part of the course)</span>
+              <h4 class="title">HTML Academy</h4>
+              <p class="period">
+                <time datetime="2021-01-18">Jan 2021</time> -
+                <time datetime="2021-07-25">July 2021</time>
+              </p>
+              <ul>
+                <li>Implementation of educational projects on layout and javascript</li>
+                <li>Website optimization</li>
+                <li>Code refactoring and error correction in someone else's code</li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="subheader">Frontend Developer</h3>
+              <h4 class="title">Self-employed</h4>
+              <p class="period">
+                <time datetime="2017-12-01">Dec 2017</time> -
+                <time datetime="2018-09-01">Sep 2018</time>
+              </p>
+              <ul>
+                <li>Page layout</li>
+                <li>Implementing scripts</li>
+                <li>Bug fixes</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="education listing">
+          <h2 class="section-header">Education</h2>
+          <ul>
+            <li>
+              <h3 class="subheader">Frontend Developer</h3>
+              <h4 class="title">HTML Academy</h4>
+              <p class="period">
+                <time datetime="2021-01-18">Jan 2021</time> -
+                <time datetime="2021-07-25">July 2021</time>
+              </p>
+            </li>
+            <li>
+              <h3 class="subheader">Self-education</h3>
+              <ul class="education__list">
+                <li>
+                  <a class="title" href="https://learn.javascript.ru/">The Modern JavaScript Tutorial</a>
+                </li>
+                <li>
+                  <a class="title" href="https://css-tricks.com/">CSS-TRICKS</a>
+                </li>
+                <li>
+                  <a class="title" href="https://web-standards.ru/">WEB Standards</a>
+                </li>
+                <li>
+                  Different YouTube channels
+                </li>
+                <li>
+                  etc
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="sidebar">
+        <section class="summary">
+          <h2 class="section-header">Summary</h2>
+          <p>Frontend developer with special care on the user experience.
+            Passionate for learning new technologies and methodologies</p>
+        </section>
+        <section class="skills">
+          <h2 class="section-header">Skills</h2>
+          <h4 class="title">Coding</h4>
+          <p>HTML, CSS, SCSS, LESS, JavaScript</p>
+
+          <h4 class="title">Industry Knowledge</h4>
+          <p>Page speed optimization</p>
+
+          <h4 class="title">Tools & Technologies</h4>
+          <p>Git, npm, BEM, Figma, Photoshop, Adobe XD, Visual Studio Code</p>
+
+          <h4 class="title">Language</h4>
+          <span>Russian (native)</span><br>
+          <span>English (A2)</span>
+        </section>
+      </div>
+      <section class="code">
+        <h2 class="section-header">Code exapmle</h2>
+        <pre>
+        <code>
+const filterForm = document.querySelector('.map__filters');
+const ANY_RANGE = 'any';
+const PRICE_RANGE = {
+  LOW: {
+    MIN: 0,
+    MAX: 10000,
+  },
+  MIDDLE: {
+    MIN: 10000,
+    MAX: 50000,
+  },
+  HIGH: {
+    MIN: 50000,
+    MAX: Infinity,
+  },
+};
+
+const FILTERS ={
+  TYPE: filterForm['housing-type'],
+  PRICE: filterForm['housing-price'],
+  ROOMS: filterForm['housing-rooms'],
+  GUESTS: filterForm['housing-guests'],
+};
+
+const adFilter = (adsArray) =&gt; {
+  const filtersValue = {
+    type: FILTERS.TYPE.value,
+    price: FILTERS.PRICE.value.toUpperCase(),
+    rooms: Number(FILTERS.ROOMS.value) ||
+      FILTERS.ROOMS.value.toLowerCase(),
+    guests: Number(FILTERS.GUESTS.value) ||
+      FILTERS.GUESTS.value.toLowerCase(),
+  };
+  const filterKeys = Object.keys(filtersValue);
+  const filteredAds = adsArray.slice()
+    .filter((currentAd) =&gt; filterKeys.every((key) =&gt; {
+      if (key === 'price') {
+        if (Object.prototype.hasOwnProperty.call(PRICE_RANGE,
+        filtersValue[key])) {
+          const min = PRICE_RANGE[filtersValue[key]].MIN;
+          const max = PRICE_RANGE[filtersValue[key]].MAX;
+          return (currentAd.offer[key] &gt;= min &&
+          currentAd.offer[key] &lt;= max);
+        }
+        return true;
+      }
+      return currentAd.offer[key] === filtersValue[key] ||
+        filtersValue[key] === ANY_RANGE;
+    }));
+  return filteredAds;
+};
+        </code>
+      </pre>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-link footer-link--github" href="https://github.com/AlexZaw"
+        aria-label="Alexander Github profile"></a>
+      <a class="footer-link footer-link--rsschool" href="https://rs.school/js/" aria-label="RS School course"></a>
+      <time datetime="2021-07-19"><span class="page__a11y-hidden">Created July 2021</span>July 2021</time>
+    </footer>
+  </div>
+</body>
+
+</html>

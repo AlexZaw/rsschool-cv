@@ -1,0 +1,36 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "rsschool-cv",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AlexZaw/rsschool-cv.git"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.14",
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "4.0.1",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "stylelint": "13.12.0",
+    "stylelint-config-htmlacademy": "0.1.4"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --no-ui --files \"css/*.css,js/**/*.js,*.html\"",
+    "test": "eslint js/",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"css/**/*.css\" --syntax css"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "*.html",
+    "js/**/*.js",
+    "сss/**/*.css"
+  ]
+}
